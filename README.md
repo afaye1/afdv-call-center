@@ -1,24 +1,24 @@
-# Twilio Contact Center Demo
+#  Contact Center Demo
 
 Essence of a modern contact center is to serve customers on multiple channels (voice, web chat, video, email, social media, etc.), allow them to move seamlessly across channels and most importantly maintain context of the conversations.
 
-The Twilio Contact Center demo is reference architecture for building a modern contact center. The focus of the demo is to show how to build a Twilio platform based contact center and the various backend and frontend components needed.
+The  Contact Center demo is reference architecture for building a modern contact center. The focus of the demo is to show how to build a  platform based contact center and the various backend and frontend components needed.
 
-<img src="contact-center-overview.png" alt="Twilio Contact Center" width="800">
+<img src="contact-center-overview.png" alt=" Contact Center" width="800">
 
 **Note:** We have done the basic work from an UX perspective and lot of opportunities remains to improve on it. It has been designed for demo purposes and has not been separately security checked.
 
-This application is provided as-is. Twilio does not officially support it.
+This application is provided as-is.  does not officially support it.
 
 # Features
 
-- Twilio Phone Numbers
-- Twilio Programmable Voice (PSTN, Twilio WebRTC Client)
-- Twilio Programmable Chat
-- Twilio Programmable SMS and Facebook Messenger
-- Twilio Programmable Video
-- Twilio TaskRouter
-- Twilio REST APIs
+-  Phone Numbers
+-  Programmable Voice (PSTN,  WebRTC Client)
+-  Programmable Chat
+-  Programmable SMS and Facebook Messenger
+-  Programmable Video
+-  TaskRouter
+-  REST APIs
 
 # Customer Journey Flows:
 
@@ -30,7 +30,7 @@ Customer fills out online call request -> Form submitted to server -> Task on Ta
 
 ## Inbound Voice Calling (PSTN):
 
-Customer calls Twilio phone number -> Twilio requests webhook -> Server generates TwiML for IVR -> Caller selects IVR option -> Task on TaskRouter created -> Find available and matching agent -> Agent accepts reservation -> Connect customer to agent (WebRTC)
+Customer calls  phone number ->  requests webhook -> Server generates TwiML for IVR -> Caller selects IVR option -> Task on TaskRouter created -> Find available and matching agent -> Agent accepts reservation -> Connect customer to agent (WebRTC)
 
 ![Customer Journey Inbound Call](contact_center_flow_inbound.png)
 
@@ -48,51 +48,51 @@ Customer fills out video call request form -> Form submitted to server -> Task o
 
 ## Real-time TaskRouter Events Dashboard:
 
-Real-time display of operational contact center metrics (for example: average call handle time, agent productivity, call metrics, TaskRouter stats, and more etc.). Please check out the following repo: https://github.com/ameerbadri/twilio-taskrouter-realtime-dashboard
+Real-time display of operational contact center metrics (for example: average call handle time, agent productivity, call metrics, TaskRouter stats, and more etc.). Please check out the following repo: https://github.com/ameerbadri/-taskrouter-realtime-dashboard
 
 ## Pre-requisites:
 
-- Basic knowledge of Twilio platform - [TwilioQuest](https://www.twilio.com/quest/), an interactive, self-paced game where you learn how to Twilio.
-- [Twilio TaskRouter](https://www.twilio.com/docs/quickstart/ruby/taskrouter)
-- [Twilio Client](https://www.twilio.com/docs/quickstart/ruby/client)
-- [Twilio Programmable Chat](https://www.twilio.com/docs/api/chat)
-- [Twilio Programmable Video](https://www.twilio.com/docs/api/video/getting-started)
+- Basic knowledge of  platform - [Quest](https://www..com/quest/), an interactive, self-paced game where you learn how to .
+- [ TaskRouter](https://www..com/docs/quickstart/ruby/taskrouter)
+- [ Client](https://www..com/docs/quickstart/ruby/client)
+- [ Programmable Chat](https://www..com/docs/api/chat)
+- [ Programmable Video](https://www..com/docs/api/video/getting-started)
 - Working knowledge of Angular.js, Bootstrap and Node.js
 
 # Installation
 
-If you haven't used Twilio before, welcome! You'll need to [Sign up for a Twilio account](https://www.twilio.com/try-twilio).
+If you haven't used  before, welcome! You'll need to [Sign up for a  account](https://www..com/try-).
 
-We recommend you create a separate project within Twilio and install this app using that project.
+We recommend you create a separate project within  and install this app using that project.
 
-**Note:** It is recommended that you have an upgraded Twilio account to fully experience this demo.
+**Note:** It is recommended that you have an upgraded  account to fully experience this demo.
 
 ## Configuration Variables
 
-Before you start the install, you’ll need to collect the following variables from the Twilio Account Portal.
+Before you start the install, you’ll need to collect the following variables from the  Account Portal.
 
-- `TWILIO_ACCOUNT_SID`
-- `TWILIO_AUTH_TOKEN`
-- `TWILIO_WORKSPACE_SID`
+- `_ACCOUNT_SID`
+- `_AUTH_TOKEN`
+- `_WORKSPACE_SID`
 
-* For Account SID and Auth Token please click here: https://www.twilio.com/console
+* For Account SID and Auth Token please click here: https://www..com/console
 * Buy a phone number or use an existing one (the application will configure the number for you later)
-* Create a new Twilio [TaskRouter Workspace](https://www.twilio.com/user/account/taskrouter/workspaces) and select the custom template.
+* Create a new  [TaskRouter Workspace](https://www..com/user/account/taskrouter/workspaces) and select the custom template.
 
-* For Twilio API Key SID and Twilio API Key Secret, click here: https://www.twilio.com/console/dev-tools/api-keys
+* For  API Key SID and  API Key Secret, click here: https://www..com/console/dev-tools/api-keys
 
-- `TWILIO_API_KEY_SID`
-- `TWILIO_API_KEY_SECRET`
+- `_API_KEY_SID`
+- `_API_KEY_SECRET`
 
-For web chat you need to set Twilio Programmable Chat environment variables:
+For web chat you need to set  Programmable Chat environment variables:
 
-- `TWILIO_CHAT_SERVICE_SID`
+- `_CHAT_SERVICE_SID`
 
-* For creating a new Chat Services or re-using an existing one, click here: https://www.twilio.com/console/chat/services
+* For creating a new Chat Services or re-using an existing one, click here: https://www..com/console/chat/services
 
-The agent UI does not support handling of multiple tasks simultaneously, hence all tasks are routed on the same task channel with capacity of one simultaneous task. For more details please check [TaskRouter Multitasking](https://www.twilio.com/docs/taskrouter/multitasking)
+The agent UI does not support handling of multiple tasks simultaneously, hence all tasks are routed on the same task channel with capacity of one simultaneous task. For more details please check [TaskRouter Multitasking](https://www..com/docs/taskrouter/multitasking)
 
-- For outbound calls enable AGENT CONFERENCE setting, click here: https://www.twilio.com/console/voice/conferences/settings
+- For outbound calls enable AGENT CONFERENCE setting, click here: https://www..com/console/voice/conferences/settings
 
 ## Terraform Install - Heroku
 
@@ -108,7 +108,7 @@ Initialize the Terraform configuration files and run
 
 If you have not installed Terraform, follow the [Terraform Getting Started](https://learn.hashicorp.com/terraform/getting-started/install.html).
 
-Add the Twilio variables listed in section [Configuration Variables](#configuration-variables) to the `terraform.tfvars` variables file.
+Add the  variables listed in section [Configuration Variables](#configuration-variables) to the `terraform.tfvars` variables file.
 
 Set your Heroku application name in the infrastructure description file `terraform_heroku.tf`
 
@@ -126,7 +126,7 @@ After the installation has completed please open `https://<your-application-name
 
 This will install the application and all the dependencies on Heroku (login required) for you. As part of the installation, the Heroku app will walk you through configuration of environment variables. Please click on the following button to deploy the application.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nash-md/twilio-contact-center)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nash-md/-contact-center)
 
 After the installation has completed please open `https://<your-application-name>.herokuapp.com/setup` and configure the application. The demo overview will be accessible at `https://<your-application-name>.herokuapp.com`.
 
@@ -142,7 +142,7 @@ Initialize your App Engine app with your project and choose its region:
 
 `gcloud app create --project=<your-project-id>`
 
-Add the Twilio variables listed in section [Configuration Variables](#configuration-variables) to the `app.yaml` variables file.
+Add the  variables listed in section [Configuration Variables](#configuration-variables) to the `app.yaml` variables file.
 
 Deploy the app on App Engine by running the following command.
 
@@ -176,7 +176,7 @@ Start the application
 
 Before you can use the demo please open `http://<your-application-name>/setup` and configure the application. The demo overview will be accessible at `http://<your-application-name>`. Please note, if process.env.PORT is not set the applications runs on port 5000.
 
-If you are running the demo locally please remember that Twilio needs a publically-accessible address for webhooks, and the setup process registers these with Twilio. As such, you'll need to run something like ngrok instead of just hitting http://localhost:5000/. As you get new addresses from ngrok you'll need to also rerun the setup process to register the updated address with Twilio.
+If you are running the demo locally please remember that  needs a publically-accessible address for webhooks, and the setup process registers these with . As such, you'll need to run something like ngrok instead of just hitting http://localhost:5000/. As you get new addresses from ngrok you'll need to also rerun the setup process to register the updated address with .
 
 **ngrok Setup**
 
